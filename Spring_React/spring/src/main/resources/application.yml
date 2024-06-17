@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    # デフォルトでHikariCPが使われるので設定不要
+    # type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    # Dockerを使っているのではポートに注意
+    url: jdbc:postgresql://postgres:5432/my_db
+    username: user
+    password: password
