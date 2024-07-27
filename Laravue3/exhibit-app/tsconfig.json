@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+      "target": "esnext",
+      "module": "es2020",
+      "strict": true,
+      "jsx": "preserve",
+      "moduleResolution": "node",
+      "allowJs": true,
+      "paths": {
+        "@/*": ["./resources/js/*"]
+      },
+
+      "typeRoots": ["./resources/js/@types"]
+
+  },
+  "include": ["./resources/js/**/*"]
+}
