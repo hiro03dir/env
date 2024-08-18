@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Standard">
+    <rule ref="Generic.WhiteSpace.ScopeIndent">
+        <properties>
+            <property name="indent" value="4"/>
+            <property name="tabIndent" value="true"/>
+        </properties>
+    </rule>
+    <rule ref="PSR12">
+        <!-- "PSR2" の中で除外するルールがあれば記載 -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+        <exclude name="PSR1.Files.SideEffects"/>
+    </rule>
+    <!-- 追加するルールがあれば記載 -->
+    <!--<rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>-->
+    <!-- 除外するファイル・ディレクトリ -->
+    <exclude-pattern>node_modules/</exclude-pattern>
+    <exclude-pattern>storage/</exclude-pattern>
+    <exclude-pattern>vendor/</exclude-pattern>
+    <exclude-pattern>/bootstrap/cache/</exclude-pattern>
+    <exclude-pattern>/public/build/</exclude-pattern>
+    <exclude-pattern>/*.js</exclude-pattern>
+</ruleset>

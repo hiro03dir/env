@@ -1,22 +1,43 @@
+version: "3"
 services:
-  app:
+  une-app:
     build:
       context: .
       dockerfile: ./docker/php/dockerfile
-    container_name: exhibit-app
+    container_name: une-app
     volumes:
-      - ./exhibit-app/:/var/www/exhibit-app
+      - ./une-app/:/var/www/une-app
     ports:
       - "8000:8000"
       - "9000:9000"
       - "5173:5173"
-    working_dir: /var/www/exhibit-app
+    working_dir: /var/www/une-app
     environment:
       - "DB_HOST=mysql"
       - "DB_PORT=3306"
       - "DB_DATABASE=laravel"
       - "DB_USERNAME=root"
       - "DB_PASSWORD=secret"
+
+  deux-app:
+    build:
+      context: .
+      dockerfile: ./docker/php/dockerfile
+    container_name: deux-app
+    volumes:
+      - ./deux-app/:/var/www/deux-app
+    ports:
+      - "8001:8001"
+      - "9001:9001"
+      - "5174:5174"
+    working_dir: /var/www/deux-app
+    environment:
+      - "DB_HOST=mysql"
+      - "DB_PORT=3306"
+      - "DB_DATABASE=laravel"
+      - "DB_USERNAME=root"
+      - "DB_PASSWORD=secret"
+
   nginx:
     image: nginx:1.27.0
     container_name: nginx_server

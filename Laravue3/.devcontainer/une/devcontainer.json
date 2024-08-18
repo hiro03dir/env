@@ -1,0 +1,17 @@
+{
+  "name": "une-app",
+  "dockerComposeFile": "../../compose.yaml",
+  "service": "une-app",
+  "workspaceFolder": "/var/www/une-app",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}

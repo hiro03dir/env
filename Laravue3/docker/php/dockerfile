@@ -10,6 +10,10 @@ RUN apt-get update && apt-get upgrade -y && \
 # Composerのインストール
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# composerで入れたパッケージ用にパス通す
+ENV PATH="$PATH:/var/www/une-app/vendor/bin"
+ENV PATH="$PATH:/var/www/deux-app/vendor/bin"
+
 # Node.jsのインストール
 RUN curl -sL https://deb.nodesource.com/setup_22.x | bash - 
 RUN apt-get install -y nodejs

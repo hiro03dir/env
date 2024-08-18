@@ -1,0 +1,17 @@
+{
+  "name": "deux-app",
+  "dockerComposeFile": "../../compose.yaml",
+  "service": "deux-app",
+  "workspaceFolder": "/var/www/deux-app",
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
