@@ -29,6 +29,7 @@
         "vue-tsc": "^2.0.26"
     },
     "dependencies": {
-        "@inertiajs/vue3": "^1.0.14"
+        "@inertiajs/vue3": "^1.0.14",
+        "common-frontend": "file:../common-frontend"
     }
 }
