@@ -1,0 +1,42 @@
+{
+    "name": "packages/common-backend",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Packages\\CommonBackend\\": "src/",
+            "Packages\\CommonBackend\\Database\\Seeders\\": "database/seeders/",
+            "Packages\\CommonBackend\\Database\\Factories\\": "database/factories/"
+        },
+        "autoload-dev": {
+            "psr-4": {
+                "CommonBackend\\Tests\\": "tests/"
+            }
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Packages\\CommonBackend\\CommonServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "hirotsugu",
+            "email": "hirotsugu.0324@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "*",
+        "illuminate/contracts": "^11.22",
+        "illuminate/database": "^11.22",
+        "illuminate/support": "^11.22",
+        "fakerphp/faker": "^1.23",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^9.4",
+        "phpunit/phpunit": "^11.3"
+    }
+}
